@@ -6,13 +6,112 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/id_kmAtual"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:hint="Informe o KM atual!"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/id_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/id_qntAbastecimento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:hint="Informe o dia abastecido!"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/id_valor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_data" />
+
+    <EditText
+        android:id="@+id/id_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:hint="Informe a Quantidade Abastecido!"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/id_valor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/id_valor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:hint="Informe o Valor abastecido!"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/id_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_data" />
+
+    <ListView
+        android:id="@+id/id_list"
+        android:layout_width="0dp"
+        android:layout_height="490dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/id_salvar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="5dp"
+        android:onClick="@string/salvar"
+        android:text="@string/salvar"
+        app:layout_constraintBottom_toTopOf="@+id/id_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/id_calcular"
+        app:layout_constraintTop_toBottomOf="@+id/id_valor" />
+
+    <Button
+        android:id="@+id/id_calcular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:onClick="@string/calcular"
+        android:text="@string/calcular"
+        app:layout_constraintBottom_toTopOf="@+id/id_list"
+        app:layout_constraintEnd_toStartOf="@+id/id_salvar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_valor" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

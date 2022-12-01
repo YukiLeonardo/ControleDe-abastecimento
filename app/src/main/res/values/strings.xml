@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Sub</string>
+    <string name="hint_informe_o_km_atual" />
+    <string name="hint_informa_a_data_de_hoje" />
+    <string name="hint_informe_a_quantidade_abastecida" />
+    <string name="hint_informe_o_valor_abastecido" />
+    <string name="salvar">SALVAR</string>
+    <string name="calcular">CALCULAR</string>
 </resources>
